@@ -33,12 +33,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         manager?.unregisterListener(this)
     }
 
-    //точность сенсора
-    override fun onSensorChanged(p0: Sensor?, p1: Int) {
+    override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
 
     }
     //данные от сенсора
-    override fun onAccuracyChanged(p0: SensorEvent?) {
+    override fun onSensorChanged(p0: SensorEvent?) {
         val degree:Int = p0?.values?.get(0)?.toInt()!!
         tvDegree.text = degree.toString() //передача показателей в текствью
         //анимация
