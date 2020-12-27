@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         rotationAnim.fillAfter = true
         //изначальное положение
         current_degree = -degree
+        imDynamic.startAnimation(rotationAnim)
 
     }
 }
